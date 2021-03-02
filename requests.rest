@@ -1,4 +1,7 @@
-// hello world
+// Install the VSCode extension REST Client (humao.rest-client) 
+// To execute this request on VSCode (it is like Postman inside vs code)
 
+
+# hello world
 GET http://127.0.0.1:3333/projects
 

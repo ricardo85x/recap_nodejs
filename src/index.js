@@ -4,8 +4,8 @@ const app = express()
 
 app.get("/projects", (req, res) => {
 
-  return res.json({"message": "Ola mundo"})
+  return res.json({ message: "Ola mundo"})
 
 })
 
-app.listen(3333, () => console.log("servidor rodando"))
+app.listen(3333, () => console.log("👻 - Back-end started"))
