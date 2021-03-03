@@ -2,6 +2,17 @@
 // To execute this request on VSCode (it is like Postman inside vs code)
 
 
-# hello world
+# List the projects
 GET http://127.0.0.1:3333/projects
 
+###
+# create a project
+POST http://127.0.0.1:3333/projects
+
+###
+# edit a project
+PUT http://127.0.0.1:3333/projects/2
+
+###
+# delete a project
+DELETE http://127.0.0.1:3333/projects/1
