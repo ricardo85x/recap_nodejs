@@ -3,7 +3,7 @@
 
 
 # List the projects
-GET http://127.0.0.1:3333/projects?title=react&owner=ricardo
+GET http://127.0.0.1:3333/projects?title=React&owner=Ricardo
 
 ###
 # create a project
@@ -11,14 +11,20 @@ POST http://127.0.0.1:3333/projects
 Content-Type: application/json
 
 {
-  "title": "Aplicativo React Native",
-  "owner": "Ricardo Ferreira"
+  "title": "Aplicativo React",
+  "owner": "Ricardo"
 }
 
 ###
 # edit a project
-PUT http://127.0.0.1:3333/projects/2
+PUT http://127.0.0.1:3333/projects/f3490922-dab3-4b1b-b7e3-ad927957a673
+Content-Type: application/json
+
+{
+  "title": "Aplicativo React a volta",
+  "owner": "Ricardo Ferreira"
+}
 
 ###
 # delete a project
-DELETE http://127.0.0.1:3333/projects/1
+DELETE http://127.0.0.1:3333/projects/d74614ef-b434-46c6-aa57-04a1eb826c9b
