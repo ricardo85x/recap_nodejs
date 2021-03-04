@@ -27,4 +27,4 @@ Content-Type: application/json
 
 ###
 # delete a project
-DELETE http://127.0.0.1:3333/projects/d74614ef-b434-46c6-aa57-04a1eb826c9b
+DELETE http://127.0.0.1:3333/projects/d74614ef-b434-46c6-aa57-04a1eb826c9bd

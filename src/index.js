@@ -1,5 +1,5 @@
 const express = require('express')
-const { v4: uuid } = require('uuid')
+const { v4: uuid, validate: isUuid } = require('uuid')
 
 const app = express()
 
@@ -13,16 +13,29 @@ const projects = [];
 const logRequest = (req, res, next) => {
 
   const { method, url } = req
-
   const logLabel = `[${method.toUpperCase()}] ${url}`
+  console.time(logLabel)
+  next()
+  console.timeEnd(logLabel)
+}
 
-  console.log(logLabel)
+const validateProjectId = (req, res, next) => {
 
+  const { id } = req.params
+
+  if (!isUuid(id)) {
+    return res.status(404).json(
+      { 
+        error: "project not fould"
+      }
+    )
+  }
 
   next()
 }
 
 app.use(logRequest)
+app.use('/projects/:id', validateProjectId)
 
 
 app.get("/projects", (req, res) => {
