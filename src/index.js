@@ -1,5 +1,5 @@
 const express = require('express')
-const { uuid } = require('uuidv4')
+const { v4: uuid } = require('uuid')
 
 const app = express()
 
@@ -8,6 +8,21 @@ app.use(express.json())
 
 
 const projects = [];
+
+
+const logRequest = (req, res, next) => {
+
+  const { method, url } = req
+
+  const logLabel = `[${method.toUpperCase()}] ${url}`
+
+  console.log(logLabel)
+
+
+  next()
+}
+
+app.use(logRequest)
 
 
 app.get("/projects", (req, res) => {
